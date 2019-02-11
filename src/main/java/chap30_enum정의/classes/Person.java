@@ -1,4 +1,4 @@
-package chap30.classes;
+package chap30_enum정의.classes;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package chap30.enums;
+package chap30_enum정의.enums;
 
 /**
  * [객체지향]

@@ -1,4 +1,4 @@
-package chap32.classes;
+package chap32_EnumSet.classes;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package chap30.enums;
+package chap30_enum정의.enums;
 
 import lombok.Getter;
 

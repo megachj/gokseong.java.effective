@@ -1,6 +1,6 @@
-package chap32;
+package chap32_EnumSet;
 
-import chap32.classes.Text;
+import chap32_EnumSet.classes.Text;
 
 import java.util.EnumSet;
 
