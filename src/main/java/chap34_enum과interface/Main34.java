@@ -9,7 +9,7 @@ import chap34_enum과interface.interfaces.Operation;
 import java.util.Arrays;
 import java.util.Collection;
 
-public class Main {
+public class Main34 {
     public static void main(String[] args) {
         double a = BasicOperation.PLUS.apply(10, 20);
         double b = BasicOperation.MINUS.apply(10, 20);

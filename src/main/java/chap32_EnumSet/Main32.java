@@ -4,7 +4,7 @@ import chap32_EnumSet.classes.Text;
 
 import java.util.EnumSet;
 
-public class Main {
+public class Main32 {
     public static void main(String[] args) {
         Text text = new Text();
 

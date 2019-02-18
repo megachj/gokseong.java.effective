@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * EnumMap 사용
  */
-public class Main {
+public class Main33 {
     public static void main(String[] args) {
         List<Herb> garden = new ArrayList<>();
         garden.add(new Herb("A", Herb.Type.ANNUAL));
