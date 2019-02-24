@@ -14,6 +14,8 @@ public class Main23 {
         Set<String> s1 = new HashSet<>(Arrays.asList(new String[]{"aaa", "bbb", "ccc"}));
         Set<String> s2 = new HashSet<>(Arrays.asList(new String[]{"aaa", "bbb"}));
 
+        instanceofFunc(s2);
+
         int number = numElementsInCommon(s1, s2);
         int number2 = numElementsInCommonWithUnbounded(s1, s2);
         System.out.println(number);
@@ -62,5 +64,18 @@ public class Main23 {
         s1.add(null);
 
         return result;
+    }
+
+    private static void instanceofFunc(Set<?> s2) {
+        // instanceof 연산자에는 형인자를 사용할 수 없다.
+        //if(s2 instanceof Set<String>) System.out.println("s2 is Set<String>");
+
+        // 비한정 와일드카드나 무인자나 instanceof 에서 동일하게 동작하므로, 깔끔하게 무인자 자료형을 사용하도록 하자.
+        //if(s2 instanceof Set<?>) System.out.println("s2 is Set");
+        if(s2 instanceof Set) System.out.println("s2 is Set");
+
+        if(s2 instanceof Set) {
+            Set<?> m2 = s2;
+        }
     }
 }
