@@ -1,8 +1,11 @@
 package chap30_enum정의.classes;
 
+import lombok.Getter;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Getter
 public class Person {
     private final String name;
     private final int age;
