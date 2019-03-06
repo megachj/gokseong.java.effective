@@ -1,6 +1,7 @@
 package chap26_제네릭자료형.classes;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.EmptyStackException;
 
 // 클래스 변수, 인스턴스 변수에 사용되는 타입을 클래스 선언부에 형인자(type parameter)로 추가
@@ -41,5 +42,17 @@ public class Stack<E> {
     private void ensureCapacity() {
         if (elements.length == size)
             elements = Arrays.copyOf(elements, 2 * size + 1);
+    }
+
+    // 와일드카드 자료형을 사용하지 않는 pushAll 메서드 - 문제가 있음
+    public void pushAll(Iterable<E> src) {
+        for (E e: src)
+            push(e);
+    }
+
+    // 와일드카드 자료형 없이 구현, 문제가 있음
+    public void popAll(Collection<E> dst) {
+        while (!isEmpty())
+            dst.add(pop());
     }
 }

@@ -8,4 +8,11 @@
 public interface Comparable<T> {
     int compare(T o);
 }
+
+// 재귀적 자료형 한정, 원소끼리 상호 비교 가능성 표현
+// T 는 Comparable<T>를 확장한 하위 자료형인데, 한정하는 문장에 T가 들어가 있기 때문에 재귀적 자료형 한정이라고 한다.
+// 결국, 자료형 한정 <T extends Comparable<T>>는 "자기 자신과 비교 가능한 모든 자료형 T"라는 의미가 된다.
+public static <T extends Comparable<T>> T max(List<T> list) {
+    ...
+}
 ```
