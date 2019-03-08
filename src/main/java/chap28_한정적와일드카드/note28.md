@@ -11,3 +11,15 @@
 * 생산자 역할, 소비자 역할이 사실 나한테는 아직 자명하게 와닿지가 않는다.
 * 생산자 역할: 인자 자기자신은 소비되며 남을 생산, pushAll을 떠올리면 된다.
 * 소비자 역할: 남이 소비되며 인자 자기자신을 생산, popAll을 떠올리면 된다.
+
+### PECS 예제
+```java
+// 이전
+public static <E> Set<E> union(Set<E> s1, Set<E> s2);
+
+// PECS 적용
+public static <E> Set<E> union(Set<? extends E> s1, Set<? extends E> s2);
+```
+**반환값에는 와일드카드 자료형을 쓰면 안 된다.**  
+왜냐하면 이 메서드를 호출하는 클라이언트 코드에서도 와일드카드 자료형을 명시해야 하기 때문이다.
+
