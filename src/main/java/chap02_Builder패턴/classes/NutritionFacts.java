@@ -1,5 +1,7 @@
 package chap02_Builder패턴.classes;
 
+import javafx.util.Builder;
+
 // 빌더 패턴
 public class NutritionFacts {
     private final int servingSize;
