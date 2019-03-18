@@ -39,6 +39,13 @@ public final class PhoneNumber {
     // hashCode를 재정의하지 않으면 문제가 발생한다.
     @Override
     public int hashCode() {
-        return super.hashCode();
+        //return super.hashCode();
+
+        // hashCode 지침에 따라 재정의
+        int result = 17;
+        result = 31 * result + (int) areaCode;
+        result = 31 * result + (int) prefix;
+        result = 31 * result + (int) lineNumber;
+        return result;
     }
 }
