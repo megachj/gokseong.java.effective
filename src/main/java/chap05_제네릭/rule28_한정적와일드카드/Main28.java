@@ -1,16 +1,16 @@
 package chap05_제네릭.rule28_한정적와일드카드;
 
-import chap05_제네릭.rule26_제네릭자료형.classes.Stack;
-import chap05_제네릭.rule28_한정적와일드카드.classes.Developer;
-import chap05_제네릭.rule28_한정적와일드카드.classes.JavaDeveloper;
-import chap05_제네릭.rule28_한정적와일드카드.classes.MaxFinder;
-import chap05_제네릭.rule28_한정적와일드카드.classes.StackWildcard;
+import chap05_제네릭.rule26_제네릭자료형.classes.Stack_26;
+import chap05_제네릭.rule28_한정적와일드카드.classes.Developer_28;
+import chap05_제네릭.rule28_한정적와일드카드.classes.JavaDeveloper_28;
+import chap05_제네릭.rule28_한정적와일드카드.classes.MaxFinder_28;
+import chap05_제네릭.rule28_한정적와일드카드.classes.StackWildcard_28;
 
 import java.util.*;
 
 public class Main28 {
     public static void main(String[] args) {
-        Stack<Number> numberStack = new Stack<>();
+        Stack_26<Number> numberStack = new Stack_26<>();
         Iterable<Integer> integers = () -> Arrays.asList(new Integer[]{1, 2, 3, 4}).iterator();
         Collection<Object> objects = new ArrayList<>();
 
@@ -19,7 +19,7 @@ public class Main28 {
         //numberStack.pushAll(integers);
         //numberStack.popAll(objects);
 
-        StackWildcard<Number> numberStackWildcard = new StackWildcard<>();
+        StackWildcard_28<Number> numberStackWildcard = new StackWildcard_28<>();
         numberStackWildcard.pushAll(integers); // 와일드카드 자료형을 써서 Number의 하위 자료형(자기 자신 포함)은 모두 처리 가능
         numberStackWildcard.popAll(objects);
 
@@ -34,12 +34,12 @@ public class Main28 {
         System.out.println(numbers1);
 
         // NOTE: PECS 고찰
-        List<Developer> developers = new ArrayList<>();
-        developers.add(new Developer(3600, 5));
-        developers.add(new JavaDeveloper(4800, 5, 10));
+        List<Developer_28> developers = new ArrayList<>();
+        developers.add(new Developer_28(3600, 5));
+        developers.add(new JavaDeveloper_28(4800, 5, 10));
 
         //Developer a = MaxFinder.max(developers); // Developer는 Comparable<Job>을 구현했기 때문에, 형인자가 맞지 않는다.
-        Developer a1 = MaxFinder.maxWithWildcard(developers);
+        Developer_28 a1 = MaxFinder_28.maxWithWildcard(developers);
         System.out.println(a1);
     }
 

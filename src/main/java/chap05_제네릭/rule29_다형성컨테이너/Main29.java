@@ -1,15 +1,15 @@
 package chap05_제네릭.rule29_다형성컨테이너;
 
-import chap05_제네릭.rule29_다형성컨테이너.classes.Favorites;
+import chap05_제네릭.rule29_다형성컨테이너.classes.Favorites_29;
 
 import java.util.ArrayList;
 
 public class Main29 {
     public static void main(String[] args) {
-        Favorites f = new Favorites();
+        Favorites_29 f = new Favorites_29();
         f.putFavorite(String.class, "Java");
         f.putFavorite(Integer.class, 0xcafebabe);
-        f.putFavorite(Class.class, Favorites.class);
+        f.putFavorite(Class.class, Favorites_29.class);
         f.putFavorite(String[].class, new String[]{"hello", "java"});
         //f.putFavorite(List<String>.class, Arrays.asList(new String[]{"hello", "cpp"})); // 실체화 불가능 자료형인 형인자 자료형은 Class 키로 들어갈 수 없다.
         ArrayList list = new ArrayList();
