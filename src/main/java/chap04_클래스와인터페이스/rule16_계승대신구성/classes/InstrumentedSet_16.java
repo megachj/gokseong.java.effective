@@ -5,10 +5,10 @@ import java.util.Set;
 
 // 계승 대신 구성을 사용하는 포장(wrapper) 클래스
 // 이런 구현 기법을 장식자 패턴이라고 부른다.
-public class InstrumentedSet<E> extends ForwardingSet<E> {
+public class InstrumentedSet_16<E> extends ForwardingSet_16<E> {
     private int addCount = 0;
 
-    public InstrumentedSet(Set<E> s) {
+    public InstrumentedSet_16(Set<E> s) {
         super(s);
     }
 

@@ -5,10 +5,10 @@ import java.util.Iterator;
 import java.util.Set;
 
 // 재사용 가능한 전달(forwarding) 클래스
-public class ForwardingSet<E> implements Set<E> {
+public class ForwardingSet_16<E> implements Set<E> {
     private final Set<E> s;
 
-    public ForwardingSet(Set<E> s) {
+    public ForwardingSet_16(Set<E> s) {
         this.s = s;
     }
 

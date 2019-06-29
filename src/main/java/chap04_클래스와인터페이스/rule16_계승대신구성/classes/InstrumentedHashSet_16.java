@@ -4,13 +4,13 @@ import java.util.Collection;
 import java.util.HashSet;
 
 // 계승을 잘못 사용한 사례
-public class InstrumentedHashSet<E> extends HashSet<E> {
+public class InstrumentedHashSet_16<E> extends HashSet<E> {
     // 요소를 삽입하려는 횟수
     private int addCount = 0;
 
-    public InstrumentedHashSet() {}
+    public InstrumentedHashSet_16() {}
 
-    public InstrumentedHashSet(int initCap, float loadFactor) {
+    public InstrumentedHashSet_16(int initCap, float loadFactor) {
         super(initCap, loadFactor);
     }
 
