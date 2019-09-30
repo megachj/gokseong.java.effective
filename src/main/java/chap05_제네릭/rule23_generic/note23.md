@@ -19,7 +19,7 @@ List\<E\> 와 같은게 제네릭 인터페이스이다.
 **제네릭 자료형**은 제네릭 클래스, 인터페이스를 말한다. 
 각 제네릭 자료형은 형인자 자료형 집합을 정의한다.  
 * 형식 형인자(formal type parameter): List\<E\>의 E와 같은 것
-* 실 형인자(actual type parameter): List<\String\>의 String과 같은 것
+* 실 형인자(actual type parameter): List\<String\>의 String과 같은 것
 
 ## 무인자 자료형
 각 제네릭 자료형은 새로운 **무인자 자료형**을 정의하는데, 실 형인자 없이 사용되는 것을 말한다.  
